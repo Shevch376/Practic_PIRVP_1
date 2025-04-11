@@ -12,6 +12,10 @@ class Settings
     {
         $this->_settings = $settings;
     }
+    public function getDbSetting(): array
+    {
+        return $this->db ?? [];
+    }
 
     public function __get($key)
     {

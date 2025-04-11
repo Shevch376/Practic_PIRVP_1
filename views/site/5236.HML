@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" modified="2025-04-10T12:00:00" version="22.1.6" type="device">
+  <diagram name="ER-диаграмма" id="UxCFJ8xOuN73-3H3Jegm">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Сотрудники -->
+        <mxCell id="сотрудники" value="<b>СОТРУДНИКИ</b><hr>" style="swimlane;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="180" height="150" />
+        </mxCell>
+        <mxCell id="сотрудники-id" value="• <b>ID_сотрудника</b> (PK)" style="text;align=left;spacingLeft=4;" vertex="1" parent="сотрудники">
+          <mxGeometry y="30" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="сотрудники-фамилия" value="• Фамилия" style="text;align=left;spacingLeft=4;" vertex="1" parent="сотрудники">
+          <mxGeometry y="50" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="сотрудники-имя" value="• Имя" style="text;align=left;spacingLeft=4;" vertex="1" parent="сотрудники">
+          <mxGeometry y="70" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="сотрудники-отчество" value="• Отчество" style="text;align=left;spacingLeft=4;" vertex="1" parent="сотрудники">
+          <mxGeometry y="90" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="сотрудники-должность" value="• Должность" style="text;align=left;spacingLeft=4;" vertex="1" parent="сотрудники">
+          <mxGeometry y="110" width="160" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Проекты -->
+        <mxCell id="проекты" value="<b>ПРОЕКТЫ</b><hr>" style="swimlane;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="180" height="110" />
+        </mxCell>
+        <mxCell id="проекты-id" value="• <b>ID_проекта</b> (PK)" style="text;align=left;spacingLeft=4;" vertex="1" parent="проекты">
+          <mxGeometry y="30" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="проекты-название" value="• Название_проекта" style="text;align=left;spacingLeft=4;" vertex="1" parent="проекты">
+          <mxGeometry y="50" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="проекты-дата" value="• Дата_сдачи" style="text;align=left;spacingLeft=4;" vertex="1" parent="проекты">
+          <mxGeometry y="70" width="160" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Участие в проектах -->
+        <mxCell id="участие" value="<b>УЧАСТИЕ_В_ПРОЕКТАХ</b><hr>" style="swimlane;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="180" height="130" />
+        </mxCell>
+        <mxCell id="участие-id" value="• <b>ID_роли</b> (PK)" style="text;align=left;spacingLeft=4;" vertex="1" parent="участие">
+          <mxGeometry y="30" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="участие-сотрудник" value="• ID_сотрудника (FK)" style="text;align=left;spacingLeft=4;" vertex="1" parent="участие">
+          <mxGeometry y="50" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="участие-проект" value="• ID_проекта (FK)" style="text;align=left;spacingLeft=4;" vertex="1" parent="участие">
+          <mxGeometry y="70" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="участие-роль" value="• Роль_в_проекте" style="text;align=left;spacingLeft=4;" vertex="1" parent="участие">
+          <mxGeometry y="90" width="160" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Связи -->
+        <mxCell id="связь1" style="edgeStyle=none;endArrow=none;html=1;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" edge="1" parent="1" source="сотрудники" target="участие">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="связь2" style="edgeStyle=none;endArrow=none;html=1;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" edge="1" parent="1" source="проекты" target="участие">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
